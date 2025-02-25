@@ -26,17 +26,7 @@ jobs:
         uses: gradle/gradle-build-action@v3
         with:
           gradle-version: 7.5.1
-
-
-      - name: Clear Old Gradle Cache
-         run: rm -rf ~/.gradle/caches ~/.gradle/wrapper
-
-      - name: Check Gradle Cache Before Deleting
-         run: ls -lah ~/.gradle/ || echo "No Gradle cache found"
-
-      - name: Set Up Gradle
-        uses: gradle/gradle-build-action@v3
-
+          cache-disabled: false
 
       - name: Verify Project Structure
         run: ls -R src/test/java
