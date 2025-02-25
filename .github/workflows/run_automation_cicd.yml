@@ -23,10 +23,14 @@ jobs:
           java-version: '8'
 
       - name: Set up Gradle
-        uses: gradle/gradle-build-action@v3
+        uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 7.5.1
           cache-disabled: false
+
+      - name: Set Up Gradle
+        uses: gradle/gradle-build-action@v3
+
 
       - name: Verify Project Structure
         run: ls -R src/test/java
