@@ -10,10 +10,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.testng:testng:7.1.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    testImplementation 'junit:junit:4.13.2'
+    // API Testing dengan Rest Assured
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'io.rest-assured:rest-assured:4.4.0'
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.17.2'
+
+    // Web UI Testing dengan Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.17.2'
+
+    // Allure untuk laporan hasil tes
+    testImplementation 'io.qameta.allure:allure-junit5:2.17.2'
 }
 
 test {
